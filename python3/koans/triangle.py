@@ -17,7 +17,7 @@
 #   about_triangle_project_2.py
 #
 def triangle(a, b, c):
-    # DELETE 'PASS' AND WRITE THIS CODE
+    return a + b + c 
     pass
 
 # Error class used in part 2.  No need to change this code.
