@@ -17,8 +17,20 @@
 #   about_triangle_project_2.py
 #
 def triangle(a, b, c):
-    return a + b + c 
-    pass
+    return a + b + c
+
+def triangle1(a, b, c):
+    side_arr = sorted([a,b,c])
+    if side_arr[0]<=0 or side_arr[2]>= side_arr[0]+side_arr[1]:
+        raise TriangleError
+    else:
+        subEdge = set([a,b,c])
+        if len(subEdge) == 1:
+            return 'equilateral'
+        elif len(subEdge) == 2:
+            return 'isosceles'
+        else:
+            return 'scalene'
 
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
