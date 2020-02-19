@@ -77,21 +77,21 @@ def score(dice):
         if i < (len(dice)-1):
             if  dice[i] == dice[i+1]:
                 if int_count == 3:
-                    sum = my_score
-                    my_score =  up_score(sum,dice[i],int_count)
+                    # sum = my_score
+                    my_score =  up_score(my_score,dice[i],int_count)
                     int_count = 1
                     continue
 
                 int_count+= 1
                 # continue
             elif dice[i] != dice[i+1]:
-                sum = my_score
-                my_score =  up_score(sum,dice[i],int_count)
+                # sum = my_score
+                my_score =  up_score(my_score,dice[i],int_count)
                 int_count= 1
                 # continue
         else:
-            sum = my_score
-            my_score =  up_score(sum,dice[i],int_count)
+            # sum = my_score
+            my_score =  up_score(my_score,dice[i],int_count)
 
 
 
